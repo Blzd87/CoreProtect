@@ -22,3 +22,9 @@ jobs:
           cache: 'maven'
       - name: Build
         run: mvn -B verify
+
+      - name: Upload CoreProtect Jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: CoreProtect
+          path: target/*.jar
